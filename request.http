@@ -1,0 +1,32 @@
+GET  http://localhost:3000 HTTP/1.1
+
+
+###
+# valid-user
+
+POST  http://localhost:3000/auth/login  HTTP/1.1
+content-type: application/json
+
+{
+    "username": "john",
+    "password": "changeme"
+}
+
+
+###
+# invalid-user
+
+
+POST  http://localhost:3000/auth/login  HTTP/1.1
+content-type: application/json
+
+{
+    "username": "tejas",
+    "password": "changeme"
+}
+
+###
+
+GET  http://localhost:3000/resource   HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTU4MzQ5MDczMiwiZXhwIjoxNTgzNDkwNzkyfQ.Xc5CmXfgX86-5K62xicDXdRVIsbTEecByfxeZtRQcaw
